@@ -144,11 +144,9 @@ jupyter notebook European_Cities_ML_Analysis.ipynb
 
 ---
 
-## Authors
+## Author
 
-**Filipa Sousa Neves** — 1211249  
-**Diogo Rainho** — 1211231  
-**Tomás Pinheiro** — 1201031  
+**Filipa Sousa Neves** — 1211249   
 
 Master's in Industrial Engineering and Management  
 Instituto Superior de Engenharia do Porto (ISEP)  
