@@ -1,4 +1,4 @@
-# European Urban Centres — Data Analysis and Predictive Modelling (ANDOC)
+# European Urban Centres - Data Analysis and Predictive Modelling (ANDOC)
 
 A complete data mining pipeline applied to a dataset of 1,165 European urban centres, following the CRISP-DM methodology. The project was developed for the **Data Analysis and Knowledge Management** course (ANDOC), Master's in Industrial Engineering and Management at ISEP.
 
@@ -11,11 +11,11 @@ The dataset was provided by the Joint Research Centre (JRC) of the European Comm
 The project addresses two predictive tasks in support of European Commission policy-making:
 
 - **Regression:** predict the average GDP of each urban centre in 2020 (`SC_GDP_AVG_2020`)
-- **Classification:** categorise the Human Development Index (HDI) into four discrete levels — Low, Medium, High, Very High (`SC_SEC_HDI_2020`)
+- **Classification:** categorise the Human Development Index (HDI) into four discrete levels: Low, Medium, High, Very High (`SC_SEC_HDI_2020`)
 
 ## Dataset
 
-- **Source:** Joint Research Centre (JRC), European Commission — GHS-UCDB R2024A
+- **Source:** Joint Research Centre (JRC), European Commission - GHS-UCDB R2024A
 - **File:** europeCitiesData.xlsx
 - **Observations:** 1,165 European urban centres
 - **Variables:** 33 (30 numerical, 3 categorical)
@@ -24,7 +24,7 @@ Variable types include continuous numerical (GDP, area, population density), dis
 
 > The dataset file is not included in this repository due to licensing. Contact the JRC or your institution for access.
 
-## Methodology — CRISP-DM
+## Methodology - CRISP-DM
 
 The project follows all six phases of the CRISP-DM framework:
 
@@ -34,11 +34,11 @@ Understanding socioeconomic and territorial patterns across European cities to s
 **2. Data Understanding**
 
 - 30 numerical and 3 categorical variables identified
-- GDP mean ~72M USD (std ~51M) — strong positive skew; outliers linked to major capitals (Paris, London, Madrid)
-- HDI mean ~0.871 (range 0.64–0.98) — concentrated distribution consistent with European context
-- Population mean ~259K (max ~14.3M); area mean ~61 km² (max ~1,649 km²)
-- Variables SC_SEC_HDI_2020, SC_SEC_LET_2020, SC_SEC_SYT_2020 — 2 missing values each
-- Pharmaceutical variables (HL_FCL_PHA_2020, HL_FDE_PHA_2020, HL_FPC_PHA_2020) — ~40% missing
+- GDP mean ~72M USD (std ~51M): strong positive skew; outliers linked to major capitals (Paris, London, Madrid)
+- HDI mean ~0.871 (range 0.64 - 0.98): concentrated distribution consistent with European context
+- Population mean ~259K (max ~14.3M); area mean ~61 kmÂ² (max ~1,649 kmÂ²)
+- Variables SC_SEC_HDI_2020, SC_SEC_LET_2020, SC_SEC_SYT_2020: 2 missing values each
+- Pharmaceutical variables (HL_FCL_PHA_2020, HL_FDE_PHA_2020, HL_FPC_PHA_2020): ~40% missing
 - Outliers retained as contextually valid (heterogeneity between small cities and major metropolises)
 
 **3. Data Preparation**
@@ -69,15 +69,13 @@ For **HDI Classification:**
 
 ### GDP Regression
 
-| Model | MSE | RMSE | MAE | R² |
+| Model | MSE | RMSE | MAE | RÂ² |
 |-------|-----|------|-----|-----|
 | KNN | 0.0190 | 0.1408 | 0.1002 | 0.9533 |
 | Decision Tree (depth=6) | 0.0159 | 0.1262 | 0.0895 | 0.9625 |
 | Random Forest | 0.0106 | 0.1029 | 0.0755 | 0.9751 |
 
-![Regression Model Comparison](regression_model_comparison.png)
-
-**Random Forest** achieved the best GDP regression performance (R²=0.9751), with SC_GDP_AVG_2015 as the overwhelmingly dominant predictor (importance: 0.9767).
+**Random Forest** achieved the best GDP regression performance (RÂ²=0.9751), with SC_GDP_AVG_2015 as the overwhelmingly dominant predictor (importance: 0.9767).
 
 ![Random Forest Feature Importance GDP](rf_feature_importance_gdp.png)
 
@@ -138,27 +136,27 @@ jupyter notebook European_Cities_ML_Analysis.ipynb
 ## Project Structure
 
 ```
-├── European_Cities_ML_Analysis.ipynb   # Main notebook
-├── europeCitiesData.xlsx               # Dataset (not included)
-├── regression_model_comparison.png     # GDP regression results comparison
-├── rf_feature_importance_gdp.png       # RF feature importance for GDP
-├── rf_confusion_matrix_hdi.png         # RF confusion matrix for HDI
-├── rf_feature_importance_hdi.png       # RF feature importance for HDI
-└── README.md                           # This file
+European_Cities_ML_Analysis.ipynb   # Main notebook
+europeCitiesData.xlsx               # Dataset (not included)
+regression_model_comparison.png     # GDP regression results comparison
+rf_feature_importance_gdp.png       # RF feature importance for GDP
+rf_confusion_matrix_hdi.png         # RF confusion matrix for HDI
+rf_feature_importance_hdi.png       # RF feature importance for HDI
+README.md                           # This file
 ```
 
 ## Author
 
-**Filipa Sousa Neves** — 1211249
+**Filipa Sousa Neves**   
 
 Master's in Industrial Engineering and Management  
 Instituto Superior de Engenharia do Porto (ISEP)  
-[LinkedIn — Filipa Neves](https://www.linkedin.com/in/filipa-neves-15987a226)
+[LinkedIn: Filipa Neves](https://www.linkedin.com/in/filipa-neves-15987a226)
 
 ## References
 
 - Chapman et al. (2000). CRISP-DM 1.0: Step-by-step data mining guide.
-- Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5–32.
+- Breiman, L. (2001). Random Forests. Machine Learning, 45(1), 5â32.
 - Hastie, T., Tibshirani, R., & Friedman, J. (2009). The Elements of Statistical Learning (2nd ed.). Springer.
 - James, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). An Introduction to Statistical Learning (2nd ed.).
 - Pedregosa, F. (2011). Scikit-learn: Machine Learning in Python.
